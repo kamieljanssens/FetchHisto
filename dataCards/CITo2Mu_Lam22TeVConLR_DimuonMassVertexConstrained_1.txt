@@ -1,0 +1,27 @@
+
+##Data card for CI interpretation of the Zprime -> ll analysis, created on 28/07/2017 at 14:47:43
+imax 1  number of channels
+jmax 1  number of backgrounds
+kmax *  number of nuisance parameters (sources of systematical uncertainties)
+------------
+#for background shapes
+shapes bkg dimuon_CI_BE_CSNeg /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained.root bkgHist
+#for signal shape
+shapes sig dimuon_CI_BE_CSNeg /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained.root sigHist
+#for data
+shapes data_obs dimuon_CI_BE_CSNeg /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained.root dataHist
+------------
+# we have just one channel, in which we observe 0 events
+bin dimuon_CI_BE_CSNeg
+observation -1.
+------------
+# now we list the expected events for signal and all backgrounds in that bin
+# the second 'process' line must have a positive number for backgrounds, and 0 for signal
+# then we list the independent sources of uncertainties, and give their effect (syst. error)
+# on each process and bin
+bin dimuon_CI_BE_CSNeg dimuon_CI_BE_CSNeg 
+process      sig  bkg  
+process       0  1
+rate         192849.25  8319.68  
+------------
+
