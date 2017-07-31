@@ -182,7 +182,7 @@ def main():
 	cardDir = "dataCards"
 	if not os.path.exists(cardDir):
     		os.makedirs(cardDir)
-	L=1
+	
 	#name = "%s/%s_%d" % (cardDir,args.chan, L)
 
 	
@@ -202,50 +202,72 @@ def main():
 		channelDict["nBkgs"] = 1
 
 		location="/afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/"
-		varName="DimuonMassVertexConstrained"  #["DimuonMassVertexConstrained","DimuonMassVertexConstrained_CSPos","DimuonMassVertexConstrained_CSNeg","DimuonMassVertexConstrained_bb","DimuonMassVertexConstrained_bb_CSPos","DimuonMassVertexConstrained_bb_CSNeg","DimuonMassVertexConstrained_be","DimuonMassVertexConstrained_be_CSPos","DimuonMassVertexConstrained_be_CSNeg"]
-		
+		varNameL=  ["DimuonMassVertexConstrained","DimuonMassVertexConstrained_CSPos","DimuonMassVertexConstrained_CSNeg","DimuonMassVertexConstrained_bb","DimuonMassVertexConstrained_bb_CSPos","DimuonMassVertexConstrained_bb_CSNeg","DimuonMassVertexConstrained_be","DimuonMassVertexConstrained_be_CSPos","DimuonMassVertexConstrained_be_CSNeg"] #"DimuonMassVertexConstrained"  		
 		sigNameL=["CITo2Mu_Lam22TeVConLL","CITo2Mu_Lam22TeVConLR","CITo2Mu_Lam22TeVConRR","CITo2Mu_Lam22TeVDesLL","CITo2Mu_Lam22TeVDesLR","CITo2Mu_Lam22TeVDesRR"]
 
+		
+		for indexx, varName in enumerate(varNameL):
 
-		for index, sigName in enumerate(sigNameL):
+			for index, sigName in enumerate(sigNameL):
 
-			rootName="%s"%location+"%s"%sigName+"_"+"%s"%varName
-			tempName="%s"%sigName+"_"+"%s"%varName
-			name = "%s/%s_%d" % (cardDir,tempName, L)
+				rootName="%s"%location+"%s"%sigName+"_"+"%s"%varName
+				tempName="%s"%sigName+"_"+"%s"%varName
+				name = "%s/%s" % (cardDir,tempName)
 
 		
 
-			channelDict["bkgShapes"] = getBackgroundShapes("%s.root"%rootName,channel)
-			scale = False
-			res = False
+				channelDict["bkgShapes"] = getBackgroundShapes("%s.root"%rootName,channel)
+				scale = False
+				res = False
 
 #### Add code here to open your histograms and get the integrals for the proper normalization
 
-			InputFile=TFile("%s.root"%rootName,"read")
-		
-			bkgHisto=InputFile.Get("bkgHist")
-			sigHisto=InputFile.Get("sigHist")
+				InputFile=TFile("%s.root"%rootName,"read")
+			
+				bkgHisto=InputFile.Get("bkgHist")
+				sigHisto=InputFile.Get("sigHist")
 
-			bkgYield=bkgHisto.Integral(0,bkgHisto.GetSize())
-			sigYield=sigHisto.Integral(0,sigHisto.GetSize())
+				bkgYield=bkgHisto.Integral(0,bkgHisto.GetSize())
+				sigYield=sigHisto.Integral(0,sigHisto.GetSize())
 
 
-			yields = []
-			yields.append(bkgYield)
-			yields.append(sigYield)
+				yields = []
+				yields.append(bkgYield)
+				yields.append(sigYield)
 
-			channelDict["sigShape"] = getSignalShape("%s.root"%rootName,channel,scale,res)
-			channelDict["data"] = getDataset("%s.root"%rootName,channel)
+				channelDict["sigShape"] = getSignalShape("%s.root"%rootName,channel,scale,res)
+				channelDict["data"] = getDataset("%s.root"%rootName,channel)
 
-			channelDict["channels"]	= getChannelBlock(1,yields,1,channel)		
+				channelDict["channels"]	= getChannelBlock(1,yields,1,channel)		
 
-			uncertBlock = ""
-#			uncerts = module.provideUncertainties(L)
-#			for uncert in config.systematics:
-#			uncertBlock += getUncert(uncert,uncerts[uncert],nBkg,L,args.chan,config.correlate,yields,args.signif)
+				uncertBlock = ""
+#				uncerts = module.provideUncertainties(L)
+#				for uncert in config.systematics:
+#				uncertBlock += getUncert(uncert,uncerts[uncert],nBkg,L,args.chan,config.correlate,yields,args.signif)
 
-			channelDict["systs"] = uncertBlock
+				channelDict["systs"] = uncertBlock
 	
-			writeCard(cardTemplate % channelDict, name)
+				writeCard(cardTemplate % channelDict, name)
+
+	command = ["python","../dataCards/combineCards.py"] 
+	nameL=["Name1","Name2","Name3","Name4"]
+	varBasis="_DimuonMassVertexConstrained"
+	if not os.path.exists("CombinedCards"):
+    		os.makedirs("CombinedCards")
+	combinedDir="%s"%cardDir+"/CombinedCards"
+
+	for sigName in sigNameL:
+	
+	
+		OutputName="%s"%sigName+"%s"%varBasis
+		NamesLL=[["_bb","_be"],["_CSPos","_CSNeg"],["_bb_CSPos","_be_CSPos","_bb_CSNeg","_be_CSNeg"]]
+	
+		for index,NameL in enumerate(NamesLL):
+			for Name in NameL:
+				command.append( "%s=%s/%s%s%s.txt"%(nameL,cardDir,sigName,varBasis,Name))   
+				outName = "%s/%s_combined_%d.txt"%(combinedDir,OutputName,index)
+				with open('%s'%outName, "w") as outfile:
+					subprocess.call(command, stdout=outfile,cwd=combinedDir)
+
 		
 main()
