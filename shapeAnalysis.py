@@ -249,11 +249,11 @@ def main():
 	
 				writeCard(cardTemplate % channelDict, name)
 
-	command = ["python","../dataCards/combineCards.py"] 
+	command = ["combineCards.py"] 
 	nameL=["Name1","Name2","Name3","Name4"]
 	varBasis="_DimuonMassVertexConstrained"
-	if not os.path.exists("CombinedCards"):
-    		os.makedirs("CombinedCards")
+	if not os.path.exists("%s"%cardDir+"/CombinedCards"):
+   		os.makedirs("%s"%cardDir+"/CombinedCards")
 	combinedDir="%s"%cardDir+"/CombinedCards"
 
 	for sigName in sigNameL:
@@ -264,10 +264,11 @@ def main():
 	
 		for index,NameL in enumerate(NamesLL):
 			for Name in NameL:
-				command.append( "%s=%s/%s%s%s.txt"%(nameL,cardDir,sigName,varBasis,Name))   
-				outName = "%s/%s_combined_%d.txt"%(combinedDir,OutputName,index)
-				with open('%s'%outName, "w") as outfile:
-					subprocess.call(command, stdout=outfile,cwd=combinedDir)
+				for namel in nameL:
+					command.append( "%s=../%s%s%s.txt"%(namel,sigName,varBasis,Name))   
+					outName = "%s/%s_combined_%d.txt"%(combinedDir,OutputName,index)
+					with open('%s'%outName, "w") as outfile:
+						subprocess.call(command, stdout=outfile,cwd=combinedDir)
 
-		
+	
 main()
