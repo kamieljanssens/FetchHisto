@@ -1,0 +1,20 @@
+Combination of Name1=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSPos.txt  Name2=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSNeg.txt
+imax 2 number of bins
+jmax 1 number of processes minus 1
+kmax 0 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes bkg       Name1     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSPos.root bkgHist
+shapes data_obs  Name1     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSPos.root dataHist
+shapes sig       Name1     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSPos.root sigHist
+shapes bkg       Name2     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSNeg.root bkgHist
+shapes data_obs  Name2     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSNeg.root dataHist
+shapes sig       Name2     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_CSNeg.root sigHist
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Name1  Name2
+observation  -1.0   -1.0 
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Name1      Name1      Name2      Name2    
+process      sig        bkg        sig        bkg      
+process      0          1          0          1        
+rate         7288.8300  4493.3800  6979.4000  3826.3100
+----------------------------------------------------------------------------------------------------------------------------------
