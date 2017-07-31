@@ -1,0 +1,26 @@
+CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained.txt
+	Significance: 163.317
+	       (p-value = 0)
+
+CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained.txt 
+	Significance: 271.684
+       		(p-value = 0)
+
+CITo2Mu_Lam22TeVConRR_DimuonMassVertexConstrained.txt 
+	Significance: 166.738
+       		(p-value = 0)
+
+CITo2Mu_Lam22TeVDesLL_DimuonMassVertexConstrained.txt 
+	Significance: 162.443
+        	(p-value = 0)
+
+CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained.txt 
+	Significance: 269.123
+       		(p-value = 0)
+
+CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained.txt 
+	Significance: 165.991
+	        (p-value = 0)
+
+
+
