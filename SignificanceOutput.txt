@@ -1,26 +1,136 @@
+EXPLANATION:
+combined_0: combination of ["_bb","_be"]
+combined_1: combination of ["_CSPos","_CSNeg"]
+combined_2: combination of ["_bb_CSPos","_be_CSPos","_bb_CSNeg","_be_CSNeg"]
+
+
+
 CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained.txt
 	Significance: 163.317
 	       (p-value = 0)
+
+CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_combined_0.txt
+	Significance: 164.312
+	       (p-value = 0)
+
+CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_combined_1.txt
+	Significance: 163.544
+	       (p-value = 0)
+
+CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 165.033
+	       (p-value = 0)
+
+
+
+
+
+
 
 CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained.txt 
 	Significance: 271.684
        		(p-value = 0)
 
+CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained_combined_0.txt 
+	Significance: 273.204
+       		(p-value = 0)
+
+CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained_combined_1.txt 
+	Significance: 271.991
+ 	      (p-value = 0)
+
+CITo2Mu_Lam22TeVConLR_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 274.075
+	       (p-value = 0)
+
+
+
+
+
+
+
+
 CITo2Mu_Lam22TeVConRR_DimuonMassVertexConstrained.txt 
 	Significance: 166.738
        		(p-value = 0)
+
+signif CITo2Mu_Lam22TeVConRR_DimuonMassVertexConstrained_combined_0.txt 
+	Significance: 167.921
+ 	      (p-value = 0)
+
+CITo2Mu_Lam22TeVConRR_DimuonMassVertexConstrained_combined_1.txt 
+	Significance: 166.975
+ 	      (p-value = 0)
+
+CITo2Mu_Lam22TeVConRR_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 168.656
+  	     (p-value = 0)
+
+
+
+
+
 
 CITo2Mu_Lam22TeVDesLL_DimuonMassVertexConstrained.txt 
 	Significance: 162.443
         	(p-value = 0)
 
+CITo2Mu_Lam22TeVDesLL_DimuonMassVertexConstrained_combined_0.txt 
+	Significance: 163.533
+  	     (p-value = 0)
+
+CITo2Mu_Lam22TeVDesLL_DimuonMassVertexConstrained_combined_1.txt 
+	Significance: 162.669
+	       (p-value = 0)
+
+CITo2Mu_Lam22TeVDesLL_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 164.265
+   		(p-value = 0)
+
+
+
+
+
+
 CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained.txt 
 	Significance: 269.123
        		(p-value = 0)
 
+CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_combined_0.txt 
+	Significance: 270.623
+ 	      (p-value = 0)
+
+CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_combined_1.txt 
+	Significance: 269.337
+  	     (p-value = 0)
+
+CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 271.312
+ 	      (p-value = 0)
+
+
+
+
+
+
+
+
 CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained.txt 
 	Significance: 165.991
 	        (p-value = 0)
+
+CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_combined_0.txt 
+	Significance: 167.123
+   	    (p-value = 0)
+
+CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_combined_1.txt 
+	Significance: 166.262
+    	    (p-value = 0)
+
+CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_combined_2.txt 
+	Significance: 167.896
+  	     (p-value = 0)
+
 
 
 
