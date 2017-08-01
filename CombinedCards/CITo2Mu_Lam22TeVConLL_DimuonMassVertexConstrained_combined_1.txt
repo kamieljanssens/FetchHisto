@@ -1,5 +1,5 @@
-Combination of CITo2Mu_Lam22TeVConLL_bb=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_bb.txt  CITo2Mu_Lam22TeVConLL_be=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_be.txt  CITo2Mu_Lam22TeVConLL_CSPos=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSPos.txt  CITo2Mu_Lam22TeVConLL_CSNeg=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSNeg.txt
-imax 4 number of bins
+Combination of CITo2Mu_Lam22TeVConLL_CSPos=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSPos.txt  CITo2Mu_Lam22TeVConLL_CSNeg=CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSNeg.txt
+imax 2 number of bins
 jmax 1 number of processes minus 1
 kmax 0 number of nuisance parameters
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -9,18 +9,12 @@ shapes sig                          CITo2Mu_Lam22TeVConLL_CSNeg  /afs/cern.ch/us
 shapes bkg                          CITo2Mu_Lam22TeVConLL_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSPos.root bkgHist
 shapes data_obs                     CITo2Mu_Lam22TeVConLL_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSPos.root dataHist
 shapes sig                          CITo2Mu_Lam22TeVConLL_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_CSPos.root sigHist
-shapes bkg                          CITo2Mu_Lam22TeVConLL_bb     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_bb.root bkgHist
-shapes data_obs                     CITo2Mu_Lam22TeVConLL_bb     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_bb.root dataHist
-shapes sig                          CITo2Mu_Lam22TeVConLL_bb     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_bb.root sigHist
-shapes bkg                          CITo2Mu_Lam22TeVConLL_be     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_be.root bkgHist
-shapes data_obs                     CITo2Mu_Lam22TeVConLL_be     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_be.root dataHist
-shapes sig                          CITo2Mu_Lam22TeVConLL_be     /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/DatacardTest/rootfiles/CITo2Mu_Lam22TeVConLL_DimuonMassVertexConstrained_be.root sigHist
 ----------------------------------------------------------------------------------------------------------------------------------
-bin          CITo2Mu_Lam22TeVConLL_bb     CITo2Mu_Lam22TeVConLL_be     CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSNeg
-observation  -1.0                         -1.0                         -1.0                         -1.0                       
+bin          CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSNeg
+observation  -1.0                         -1.0                       
 ----------------------------------------------------------------------------------------------------------------------------------
-bin          CITo2Mu_Lam22TeVConLL_bb     CITo2Mu_Lam22TeVConLL_bb     CITo2Mu_Lam22TeVConLL_be     CITo2Mu_Lam22TeVConLL_be     CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSNeg  CITo2Mu_Lam22TeVConLL_CSNeg
-process      sig                          bkg                          sig                          bkg                          sig                          bkg                          sig                          bkg                        
-process      0                            1                            0                            1                            0                            1                            0                            1                          
-rate         2239.4300                    2630.7400                    2224.7800                    5688.9400                    2235.0200                    4493.3800                    2229.1900                    3826.3100                  
+bin          CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSPos  CITo2Mu_Lam22TeVConLL_CSNeg  CITo2Mu_Lam22TeVConLL_CSNeg
+process      sig                          bkg                          sig                          bkg                        
+process      0                            1                            0                            1                          
+rate         2235.0200                    4493.3800                    2229.1900                    3826.3100                  
 ----------------------------------------------------------------------------------------------------------------------------------
