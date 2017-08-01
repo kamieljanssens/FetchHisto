@@ -1,0 +1,18 @@
+EXPLANATION:
+combined_0: combination of ["_bb","_be"]
+combined_1: combination of ["_CSPos","_CSNeg"]
+combined_2: combination of ["_bb_CSPos","_be_CSPos","_bb_CSNeg","_be_CSNeg"]
+
+
+
+CITo2Mu_Lam22TeVConLR_CosThetaStarDilepton_Binning.txt 
+	Significance: 54.803
+ 	      (p-value = 0)
+
+
+CITo2Mu_Lam22TeVDesLR_CosThetaStarDilepton_Binning.txt 
+	Significance: 52.7159
+	       (p-value = 0)
+
+
+For both RR chanels: the signal is negative -> significance is 0.

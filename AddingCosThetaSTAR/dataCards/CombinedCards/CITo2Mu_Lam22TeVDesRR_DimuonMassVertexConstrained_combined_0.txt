@@ -1,0 +1,20 @@
+Combination of CITo2Mu_Lam22TeVDesRR_bb=CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_bb.txt  CITo2Mu_Lam22TeVDesRR_be=CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_be.txt
+imax 2 number of bins
+jmax 1 number of processes minus 1
+kmax 0 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes bkg                       CITo2Mu_Lam22TeVDesRR_bb  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_bb.root bkgHist
+shapes data_obs                  CITo2Mu_Lam22TeVDesRR_bb  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_bb.root dataHist
+shapes sig                       CITo2Mu_Lam22TeVDesRR_bb  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_bb.root sigHist
+shapes bkg                       CITo2Mu_Lam22TeVDesRR_be  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_be.root bkgHist
+shapes data_obs                  CITo2Mu_Lam22TeVDesRR_be  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_be.root dataHist
+shapes sig                       CITo2Mu_Lam22TeVDesRR_be  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesRR_DimuonMassVertexConstrained_be.root sigHist
+----------------------------------------------------------------------------------------------------------------------------------
+bin          CITo2Mu_Lam22TeVDesRR_bb  CITo2Mu_Lam22TeVDesRR_be
+observation  -1.0                      -1.0                    
+----------------------------------------------------------------------------------------------------------------------------------
+bin          CITo2Mu_Lam22TeVDesRR_bb  CITo2Mu_Lam22TeVDesRR_bb  CITo2Mu_Lam22TeVDesRR_be  CITo2Mu_Lam22TeVDesRR_be
+process      sig                       bkg                       sig                       bkg                     
+process      0                         1                         0                         1                       
+rate         2282.6700                 3214.2400                 2277.0100                 6852.0500               
+----------------------------------------------------------------------------------------------------------------------------------

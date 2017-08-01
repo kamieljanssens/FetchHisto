@@ -1,0 +1,26 @@
+Combination of CITo2Mu_Lam22TeVDesLR_bb_CSPos=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSPos.txt  CITo2Mu_Lam22TeVDesLR_be_CSPos=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSPos.txt  CITo2Mu_Lam22TeVDesLR_bb_CSNeg=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSNeg.txt  CITo2Mu_Lam22TeVDesLR_be_CSNeg=CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSNeg.txt
+imax 4 number of bins
+jmax 1 number of processes minus 1
+kmax 0 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes bkg                             CITo2Mu_Lam22TeVDesLR_bb_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSNeg.root bkgHist
+shapes data_obs                        CITo2Mu_Lam22TeVDesLR_bb_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSNeg.root dataHist
+shapes sig                             CITo2Mu_Lam22TeVDesLR_bb_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSNeg.root sigHist
+shapes bkg                             CITo2Mu_Lam22TeVDesLR_bb_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSPos.root bkgHist
+shapes data_obs                        CITo2Mu_Lam22TeVDesLR_bb_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSPos.root dataHist
+shapes sig                             CITo2Mu_Lam22TeVDesLR_bb_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_bb_CSPos.root sigHist
+shapes bkg                             CITo2Mu_Lam22TeVDesLR_be_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSNeg.root bkgHist
+shapes data_obs                        CITo2Mu_Lam22TeVDesLR_be_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSNeg.root dataHist
+shapes sig                             CITo2Mu_Lam22TeVDesLR_be_CSNeg  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSNeg.root sigHist
+shapes bkg                             CITo2Mu_Lam22TeVDesLR_be_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSPos.root bkgHist
+shapes data_obs                        CITo2Mu_Lam22TeVDesLR_be_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSPos.root dataHist
+shapes sig                             CITo2Mu_Lam22TeVDesLR_be_CSPos  /afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/CITo2Mu_Lam22TeVDesLR_DimuonMassVertexConstrained_be_CSPos.root sigHist
+----------------------------------------------------------------------------------------------------------------------------------
+bin          CITo2Mu_Lam22TeVDesLR_bb_CSPos  CITo2Mu_Lam22TeVDesLR_be_CSPos  CITo2Mu_Lam22TeVDesLR_bb_CSNeg  CITo2Mu_Lam22TeVDesLR_be_CSNeg
+observation  -1.0                            -1.0                            -1.0                            -1.0                          
+----------------------------------------------------------------------------------------------------------------------------------
+bin          CITo2Mu_Lam22TeVDesLR_bb_CSPos  CITo2Mu_Lam22TeVDesLR_bb_CSPos  CITo2Mu_Lam22TeVDesLR_be_CSPos  CITo2Mu_Lam22TeVDesLR_be_CSPos  CITo2Mu_Lam22TeVDesLR_bb_CSNeg  CITo2Mu_Lam22TeVDesLR_bb_CSNeg  CITo2Mu_Lam22TeVDesLR_be_CSNeg  CITo2Mu_Lam22TeVDesLR_be_CSNeg
+process      sig                             bkg                             sig                             bkg                             sig                             bkg                             sig                             bkg                           
+process      0                               1                               0                               1                               0                               1                               0                               1                             
+rate         3227.8000                       1769.0500                       4061.0300                       3594.2900                       3070.0800                       1445.1900                       3909.3300                       3257.7600                     
+----------------------------------------------------------------------------------------------------------------------------------
