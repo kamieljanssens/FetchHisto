@@ -202,6 +202,7 @@ def plotDataMC(args,plot):
 
  
 	drawStack = stack
+	drawStack.theStack.Draw("samehist")	
 
 	if len(args.signals) != 0:
 		signalhists = []
@@ -230,7 +231,7 @@ def plotDataMC(args,plot):
 	 
 	
 
-	drawStack.theStack.Draw("samehist")							
+						
 
 
 	
@@ -273,10 +274,10 @@ def plotDataMC(args,plot):
 	if args.ratio:
 
 		ratioPad.RedrawAxis()
-	if not os.path.exists("NplotsCI"):
-		os.makedirs("NplotsCI")	
+	if not os.path.exists("NPlotsCI"):
+		os.makedirs("NPlotsCI")	
 	print plot.fileName
-	hCanvas.Print("NplotsCI/"+plot.fileName+".png")
+	hCanvas.Print("NPlotsCI/"+plot.fileName+".png")
 
 
 
@@ -301,6 +302,8 @@ def plotDataMC(args,plot):
 
 	##Signals
 
+	binningD={"binningMass": [400,500,700,1100,1900,3500], "binningCosThetaStar": [-1,-0.8,-0.6,-0.4,-0.2,0,0.2,0.4,0.6,0.8,1]}
+
 
 	for index, signal in enumerate(signals):
 		if not os.path.exists("rootfiles"):
@@ -309,7 +312,14 @@ def plotDataMC(args,plot):
      		HistoS = signalhists[index]
 		SignalName.append(signal.label)
 
-		binning = [400,500,700,1100,1900,3500]
+
+		if "Mass" in plot.histName:
+			binning=binningD["binningMass"]
+
+		if "CosThetaStar" in plot.histName:
+			binning=binningD["binningCosThetaStar"]
+
+
 
 		newHistoB = TH1F("bkgHist","bkgHist",len(binning)-1,array("f",binning))	
 		for index, binBoundary in enumerate(binning):
@@ -333,40 +343,6 @@ def plotDataMC(args,plot):
 		OutputFile.Write()
 		OutputFile.Close()
 
-
-
-		## other binning for cos theta star (but is exectuted for all files)
-
-	for index, signal in enumerate(signals):
-		if not os.path.exists("rootfiles"):
-			os.makedirs("rootfiles")
-		OutputFile=TFile("rootfiles/"+"%s"%(signal.label)+"_"+"%s"%(plot.histName)+"_Binning.root","RECREATE")
-     		HistoS = signalhists[index]
-		SignalName.append(signal.label)
-
-		binning = [-1,-0.6,-0.2,0.2,0.6,1]
-
-		newHistoB = TH1F("bkgHist","bkgHist",len(binning)-1,array("f",binning))	
-		for index, binBoundary in enumerate(binning):
-    			if index < len(binning)-1:
-     				newHistoB.SetBinContent(index+1,HistoB.Integral(HistoB.GetXaxis().FindBin(binBoundary),HistoB.GetXaxis().FindBin(binning[index+1])))
-
-
-		newHistoS = TH1F("sigHist","sigHist",len(binning)-1,array("f",binning))
-		for index, binBoundary in enumerate(binning):
-    			if index < len(binning)-1:
-     				newHistoS.SetBinContent(index+1,HistoS.Integral(HistoS.GetXaxis().FindBin(binBoundary),HistoS.GetXaxis().FindBin(binning[index+1]))-HistoSDY.Integral(HistoSDY.GetXaxis().FindBin(binBoundary),HistoSDY.GetXaxis().FindBin(binning[index+1])))
-
-		newHistoD = TH1F("dataHist","dataHist",len(binning)-1,array("f",binning))
-		for index, binBoundary in enumerate(binning):
-    			if index < len(binning)-1:
-     				newHistoD.SetBinContent(index+1,HistoB.Integral(HistoB.GetXaxis().FindBin(binBoundary),HistoB.GetXaxis().FindBin(binning[index+1]))+HistoS.Integral(HistoS.GetXaxis().FindBin(binBoundary),HistoS.GetXaxis().FindBin(binning[index+1]))-HistoSDY.Integral(HistoSDY.GetXaxis().FindBin(binBoundary),HistoSDY.GetXaxis().FindBin(binning[index+1])))
-
-
-	
-
-		OutputFile.Write()
-		OutputFile.Close()
 					
 if __name__ == "__main__":
 	
@@ -395,7 +371,7 @@ if __name__ == "__main__":
 
 	args = parser.parse_args()
 	if len(args.backgrounds) == 0:
-		args.backgrounds = ["DrellYan","OtherPrompt","NonPrompt"]
+		args.backgrounds = ["DrellYan"]
 
 	if len(args.DYSignals) == 0:
 		args.DYSignals = ["DYTo2Mu_M300"]

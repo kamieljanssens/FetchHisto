@@ -202,9 +202,9 @@ def main():
 		channelDict["nBkgs"] = 1
 
 		location="/afs/cern.ch/user/k/kjanssen/CMSSW_7_4_7/src/HiggsAnalysis/CombinedLimit/ZPrimeCalcNew/rootfiles/"
-		varNameL=  ["DimuonMassVertexConstrained","DimuonMassVertexConstrained_CSPos","DimuonMassVertexConstrained_CSNeg","DimuonMassVertexConstrained_bb","DimuonMassVertexConstrained_bb_CSPos","DimuonMassVertexConstrained_bb_CSNeg","DimuonMassVertexConstrained_be","DimuonMassVertexConstrained_be_CSPos","DimuonMassVertexConstrained_be_CSNeg","CosThetaStarDilepton_Binning"] #"DimuonMassVertexConstrained"  		
-		sigNameL=["CITo2Mu_Lam22TeVConLR","CITo2Mu_Lam22TeVConRR","CITo2Mu_Lam22TeVDesLL","CITo2Mu_Lam22TeVDesLR","CITo2Mu_Lam22TeVDesRR"]
-			#####"CITo2Mu_Lam22TeVConLL",
+		varNameL=  ["DimuonMassVertexConstrained","DimuonMassVertexConstrained_CSPos","DimuonMassVertexConstrained_CSNeg","DimuonMassVertexConstrained_bb","DimuonMassVertexConstrained_bb_CSPos","DimuonMassVertexConstrained_bb_CSNeg","DimuonMassVertexConstrained_be","DimuonMassVertexConstrained_be_CSPos","DimuonMassVertexConstrained_be_CSNeg","CosThetaStarDilepton"] #"DimuonMassVertexConstrained"  		
+		sigNameL=["CITo2Mu_Lam10TeVConLL","CITo2Mu_Lam10TeVConLR","CITo2Mu_Lam10TeVConRR","CITo2Mu_Lam10TeVDesLL","CITo2Mu_Lam10TeVDesLR","CITo2Mu_Lam10TeVDesRR"]
+		
 		
 		for indexx, varName in enumerate(varNameL):
 
@@ -267,7 +267,9 @@ def main():
 		for index,NameL in enumerate(NamesLL):
 			command = ["combineCards.py"] 
 			for Name in NameL:
-				command.append( "%s%s=%s%s%s.txt"%(sigName,Name,sigName,varBasis,Name))   
+				print "%s=%s%s%s.txt"%(Name,sigName,varBasis,Name)
+				command.append( "%s=%s%s%s.txt"%(Name,sigName,varBasis,Name))
+				print command   
 				outName = "%s/%s_combined_%d.txt"%(combinedDir,OutputName,index)
 				with open('%s'%outName, "w") as outfile:
 					subprocess.call(command, stdout=outfile,cwd=cardDir)

@@ -64,12 +64,12 @@ crossSections = {
 "qcd2400to3200":0.00682981,
 "qcd3200":0.000165445,
 
-"CITo2Mu_Lam22TeVConLL":0.3637,
-"CITo2Mu_Lam22TeVConLR":0.7486,
-"CITo2Mu_Lam22TeVConRR":0.3737,
-"CITo2Mu_Lam22TeVDesLL":0.3551,
-"CITo2Mu_Lam22TeVDesLR":0.7283,
-"CITo2Mu_Lam22TeVDesRR":0.3629,
+"CITo2Mu_Lam10TeVConLL":0.63935,
+"CITo2Mu_Lam10TeVConLR":0.684785,
+"CITo2Mu_Lam10TeVConRR":0.640769 ,
+"CITo2Mu_Lam10TeVDesLL":0.557603,
+"CITo2Mu_Lam10TeVDesLR":0.576513,
+"CITo2Mu_Lam10TeVDesRR":0.547086,
 
 "DYTo2Mu_M300":0.562538,
 }
@@ -88,54 +88,54 @@ class Signals:
 	#	uncertainty	 = 0.
 	#	scaleFac     = 1.
 	#	additionalSelection = None 	
-	class CITo2Mu_Lam22TeVConLL:
-		subprocesses = ["CITo2Mu_Lam22TeVConLL"]
-		label = "CITo2Mu_Lam22TeVConLL"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Con LL"
+	class CITo2Mu_Lam10TeVConLL:
+		subprocesses = ["CITo2Mu_Lam10TeVConLL"]
+		label = "CITo2Mu_Lam10TeVConLL"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Con LL"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kAzure+1
 		uncertainty = 0.0
 		scaleFac     = 1.	
 		additionalSelection = None
-	class CITo2Mu_Lam22TeVConLR:
-		subprocesses = ["CITo2Mu_Lam22TeVConLR"]
-		label = "CITo2Mu_Lam22TeVConLR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Con LR"
+	class CITo2Mu_Lam10TeVConLR:
+		subprocesses = ["CITo2Mu_Lam10TeVConLR"]
+		label = "CITo2Mu_Lam10TeVConLR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Con LR"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kRed-4
 		uncertainty = 0.0
 		scaleFac     = 1.	
 		additionalSelection = None
-	class CITo2Mu_Lam22TeVConRR:
-		subprocesses = ["CITo2Mu_Lam22TeVConRR"]
-		label = "CITo2Mu_Lam22TeVConRR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Con RR"
+	class CITo2Mu_Lam10TeVConRR:
+		subprocesses = ["CITo2Mu_Lam10TeVConRR"]
+		label = "CITo2Mu_Lam10TeVConRR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Con RR"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kYellow
 		uncertainty = 0.0
 		scaleFac     = 1.	
 		additionalSelection = None
-	class CITo2Mu_Lam22TeVDesLL:
-		subprocesses = ["CITo2Mu_Lam22TeVDesLL"]
-		label = "CITo2Mu_Lam22TeVDesLL"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Des LL"
+	class CITo2Mu_Lam10TeVDesLL:
+		subprocesses = ["CITo2Mu_Lam10TeVDesLL"]
+		label = "CITo2Mu_Lam10TeVDesLL"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Des LL"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kBlue+1
 		uncertainty = 0.0
 		scaleFac     = 1.	
 		additionalSelection = None
-	class CITo2Mu_Lam22TeVDesLR:
-		subprocesses = ["CITo2Mu_Lam22TeVDesLR"]
-		label = "CITo2Mu_Lam22TeVDesLR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Des LR"
+	class CITo2Mu_Lam10TeVDesLR:
+		subprocesses = ["CITo2Mu_Lam10TeVDesLR"]
+		label = "CITo2Mu_Lam10TeVDesLR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Des LR"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kGreen+1
 		uncertainty = 0.0
 		scaleFac     = 1.	
 		additionalSelection = None
-	class CITo2Mu_Lam22TeVDesRR:
-		subprocesses = ["CITo2Mu_Lam22TeVDesRR"]
-		label = "CITo2Mu_Lam22TeVDesRR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 22 TeV - Des RR"
+	class CITo2Mu_Lam10TeVDesRR:
+		subprocesses = ["CITo2Mu_Lam10TeVDesRR"]
+		label = "CITo2Mu_Lam10TeVDesRR"		#"CI #rightarrow #mu^{+}#mu^{-} #Lambda 10 TeV - Des RR"
 		fillcolor = ROOT.kWhite
 		fillstyle = 0
 		linecolor = ROOT.kMagenta+1
@@ -303,20 +303,20 @@ class plots:
 	#etaPlot = Plot("LeptonEta","CIleptonEta",xLabel="lepton eta []",log=True,xRange=[-5,5],rebin=1,yLabel="Events")
 
 	##mass plots general
-	massPlot = Plot("DimuonMassVertexConstrained","CIDiMuonMass",xLabel="dimuon mass [GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSPosPlot = Plot("DimuonMassVertexConstrained_CSPos","CIDiMuonMassCSPos",xLabel="dimuon mass Pos cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSNegPlot = Plot("DimuonMassVertexConstrained_CSNeg","CIDiMuonMassCSNeg",xLabel="dimuon mass Neg cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massPlot = Plot("DimuonMassVertexConstrained","CIDiMuonMass",xLabel="dimuon mass [GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSPosPlot = Plot("DimuonMassVertexConstrained_CSPos","CIDiMuonMassCSPos",xLabel="dimuon mass Pos cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSNegPlot = Plot("DimuonMassVertexConstrained_CSNeg","CIDiMuonMassCSNeg",xLabel="dimuon mass Neg cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
               
 	##mass plot bb
-	massPlotBB = Plot("DimuonMassVertexConstrained_bb","CIDimuonMass_bb",xLabel="dimuon mass [GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSPosPlotBB = Plot("DimuonMassVertexConstrained_bb_CSPos","CIDiMuonMassCSPos_bb",xLabel="dimuon mass Pos cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSNegPlotBB = Plot("DimuonMassVertexConstrained_bb_CSNeg","CIDiMuonnMassCSNeg_bb",xLabel="dimuon mass Neg cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massPlotBB = Plot("DimuonMassVertexConstrained_bb","CIDimuonMass_bb",xLabel="dimuon mass [GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSPosPlotBB = Plot("DimuonMassVertexConstrained_bb_CSPos","CIDiMuonMassCSPos_bb",xLabel="dimuon mass Pos cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSNegPlotBB = Plot("DimuonMassVertexConstrained_bb_CSNeg","CIDiMuonnMassCSNeg_bb",xLabel="dimuon mass Neg cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
               
 	##mass plot be	
-	massPlotBE = Plot("DimuonMassVertexConstrained_be","CIDimuonMass_be",xLabel="dimuon mass [GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSPosPlotBE = Plot("DimuonMassVertexConstrained_be_CSPos","CIDiMuonMassCSPos_be",xLabel="dimuon mass Pos cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
-	massCSNegPlotBE = Plot("DimuonMassVertexConstrained_be_CSNeg","CIDiMuonMassCSNeg_be",xLabel="dimuon mass Neg cos theta*[GeV]",log=False,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massPlotBE = Plot("DimuonMassVertexConstrained_be","CIDimuonMass_be",xLabel="dimuon mass [GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSPosPlotBE = Plot("DimuonMassVertexConstrained_be_CSPos","CIDiMuonMassCSPos_be",xLabel="dimuon mass Pos cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
+	massCSNegPlotBE = Plot("DimuonMassVertexConstrained_be_CSNeg","CIDiMuonMassCSNeg_be",xLabel="dimuon mass Neg cos theta*[GeV]",log=True,xRange=[0,3000],rebin=50,yLabel="Events/50 GeV")
 
 
 	##CosTheta* plot
-	CosThetaStarPlot=Plot("CosThetaStarDilepton","CosThetaStarDilepton",xLabel="dilepton cos(theta*)[]",log=False,xRange=[-1,1],rebin=1,yLabel="Events")
+	CosThetaStarPlot=Plot("CosThetaStarDilepton","CosThetaStarDilepton",xLabel="dilepton cos(theta*)[]",log=True,xRange=[-1,1],rebin=10,yLabel="Events/10")

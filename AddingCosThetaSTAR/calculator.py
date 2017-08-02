@@ -219,18 +219,9 @@ def plotDataMC(args,plot):
 
  
 	drawStack = stack
+	drawStack.theStack.Draw("samehist")
 
-	if len(args.signals) != 0:
-		signalhists = []
-		SignalName = []
-		for Signal in signals:
-			
-			signalhist = Signal.loadHistogram(lumi,mcFiles,plot)
-			signalhist.SetLineWidth(2)
-	#		signalhist.Add(stack.theHistogram)
-			signalhist.SetMinimum(0.1)
-			signalhist.Draw("samehist")
-			signalhists.append(signalhist)	
+
 
 	if len(args.DYSignals) != 0:
 		DYSignalhists = []
@@ -244,10 +235,20 @@ def plotDataMC(args,plot):
 			DYSignalhist.Draw("samehist")
 			DYSignalhists.append(DYSignalhist)	
 
-	 
+	if len(args.signals) != 0:
+		signalhists = []
+		SignalName = []
+		for Signal in signals:
+			
+			signalhist = Signal.loadHistogram(lumi,mcFiles,plot)
+			signalhist.SetLineWidth(2)
+	#		signalhist.Add(stack.theHistogram)
+			signalhist.SetMinimum(0.1)
+			signalhist.Draw("samehist")
+			signalhists.append(signalhist)		 
 	
 
-	drawStack.theStack.Draw("samehist")							
+							
 
 
 	
@@ -489,7 +490,7 @@ if __name__ == "__main__":
 
 	args = parser.parse_args()
 	if len(args.backgrounds) == 0:
-		args.backgrounds = ["DrellYan","OtherPrompt","NonPrompt"]
+		args.backgrounds = ["DrellYan"]#,"OtherPrompt","NonPrompt"]
 
 	if len(args.DYSignals) == 0:
 		args.DYSignals = ["DYTo2Mu_M300"]
